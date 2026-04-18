@@ -20,13 +20,13 @@ export function AcademyTimeline() {
     return (
         <div ref={containerRef} className="relative mx-auto mt-24 max-w-6xl w-full">
             {/* Background Vertical Line (Mobile) */}
-            <div className="absolute md:hidden left-1/2 top-[28px] bottom-[150px] w-px -translate-x-1/2 bg-white/10" />
+            <div className="absolute md:hidden left-1/2 top-[28px] bottom-[150px] w-px -translate-x-1/2 bg-white/10 -z-10" />
             {/* Background Horizontal Line (Desktop) */}
-            <div className="hidden md:block absolute left-[12.5%] top-[28px] w-[75%] h-px bg-white/10" />
+            <div className="hidden md:block absolute left-[12.5%] top-[28px] w-[75%] h-px bg-white/10 -z-10" />
 
             {/* Animated Vertical Line (Mobile) */}
             <motion.div
-                className="absolute md:hidden left-1/2 top-[28px] bottom-[150px] w-px -translate-x-1/2 origin-top"
+                className="absolute md:hidden left-1/2 top-[28px] bottom-[150px] w-px -translate-x-1/2 origin-top -z-10"
                 style={{
                     scaleY: lineScale,
                     backgroundImage: 'linear-gradient(to bottom, #ef4444 0%, #f97316 33%, #3b82f6 66%, #10b981 100%)'
@@ -34,7 +34,7 @@ export function AcademyTimeline() {
             />
             {/* Animated Horizontal Line (Desktop) */}
             <motion.div
-                className="hidden md:block absolute left-[12.5%] top-[28px] w-[75%] h-px origin-left"
+                className="hidden md:block absolute left-[12.5%] top-[28px] w-[75%] h-px origin-left -z-10"
                 style={{
                     scaleX: lineScale,
                     backgroundImage: 'linear-gradient(to right, #ef4444 0%, #f97316 33%, #3b82f6 66%, #10b981 100%)'
