@@ -58,6 +58,8 @@ export async function joinWaitlistAction(
     }
 
     if (response.status === 400) {
+      const body400 = await response.text();
+      console.error('Brevo 400 response:', body400);
       return { success: false, error: 'invalid_email' };
     }
 
