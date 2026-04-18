@@ -363,17 +363,3 @@
     scroll-behavior: auto !important;
   }
 }
-
-/* React Grid Layout resize handle styling */
-.react-resizable-handle {
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.rgl-edit-mode .react-resizable-handle {
-  opacity: 1;
-}
-
-.rgl-edit-mode .react-resizable-handle::after {
-  border-color: oklch(0.72 0.18 55 / 0.6);
-}
